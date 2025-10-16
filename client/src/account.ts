@@ -48,6 +48,8 @@ function ajaxRequest(
             // JQuery does this automatically, however we'll add it here explicitly
             // so the intent is clear incase of refactoring in the future.
             "X-Requested-With": "XMLHttpRequest",
+            // Bypass ngrok free tier warning page
+            "ngrok-skip-browser-warning": "true",
         },
     };
     if (data) {

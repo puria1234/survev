@@ -698,6 +698,9 @@ class Application {
                 data: JSON.stringify(matchArgs),
                 contentType: "application/json; charset=utf-8",
                 timeout: 10 * 1000,
+                headers: {
+                    "ngrok-skip-browser-warning": "true",
+                },
                 xhrFields: {
                     withCredentials: proxy.anyLoginSupported(),
                 },

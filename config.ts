@@ -23,7 +23,7 @@ export function getConfig(isProduction: boolean, dir: string) {
             thisRegion: "local",
         },
         vite: {
-            host: "127.0.0.1",
+            host: "0.0.0.0",
             port: 3000,
         },
         regions: {},

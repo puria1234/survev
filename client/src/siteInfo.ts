@@ -34,7 +34,12 @@ export class SiteInfo {
             teamSelector.append(elm);
         }
 
-        $.ajax(siteInfoUrl).done((data: SiteInfoRes) => {
+        $.ajax({
+            url: siteInfoUrl,
+            headers: {
+                "ngrok-skip-browser-warning": "true",
+            },
+        }).done((data: SiteInfoRes) => {
             this.info = data || {};
             this.loaded = true;
             this.updatePageFromInfo();

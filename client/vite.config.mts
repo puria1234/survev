@@ -76,6 +76,13 @@ export default defineConfig(({ mode }) => {
     const serverOptions: ServerOptions = {
         port: Config.vite.port,
         host: Config.vite.host,
+        // Allow ngrok and other tunneling services
+        allowedHosts: [
+            ".ngrok-free.app",
+            ".ngrok.io",
+            ".loca.lt",
+            ".localhost.run",
+        ],
         proxy: {
             // this redirects /stats to /stats/
             // because vite is cringe and does not work without trailing slashes at the end of paths 😭
